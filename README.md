@@ -1,9 +1,12 @@
 # Skeeter Shooting between Docker Containers
 
-Simple python project to learn how to set up containers using docker-compose and establish a kafka network between services using confluent-kafka. You need to have docker and docker-compose installed in your system in order to run this project. The project emulates skeeter shooting, where the service skeeter sends a messages in the topic 'skeet' and waits for messages in the topic 'shoot' from all the shooter services. Then it times the response of all shooters and the fastest between them is the winner of the round. By default 100 rounds will be played by 7 shooters. You can add more shooters or more game rounds by modifying the 'docker-compose.yml' file and tuning the 'variables.env' file accordingly. To run the game just execute the 'run.sh' script. 
+Simple python project to learn how to set up containers using docker-compose and establish a kafka network between services using confluent-kafka. You need to have docker and docker-compose installed in your system in order to run this project. The project emulates skeeter shooting, where the service skeeter sends a messages in the topic 'skeet' and waits for messages in the topic 'shoot' from all the shooter services. Then it times the response of all shooters and the fastest between them is the winner of the round. By default 100 rounds will be played by 7 shooters. You can add more shooters or more game rounds by modifying the 'docker-compose.yml' file and tuning the 'variables.env' file accordingly. 
 
-At the end the game shows a resume of all the rounds by attaching to the skeeter log:
+To run the game just execute the 'run.sh' script:
 
+[run.webm](https://github.com/LlucSF/docker-skeeter-shooting/assets/34506757/071ec42c-1ffa-4632-bd62-f1f988809b61)
+
+At the end, the game shows a resume of all the rounds by attaching to the skeeter log:
 <pre>
   +++++ Final results +++++  
  +----+---------------+--------------+-----------------+ 
